@@ -6,8 +6,8 @@ const read = require('read');
 module.exports = () => {
   read().then(result => {
     const configPath = path.resolve(process.env.HOME || process.env.USERPROFILE, '.readme-genrc');
-    const file = fs.existsSync(configPath) ? configPath : path.resolve(__dirname, 'fixture/README.ejs');
-    ejs.renderFile(file, result.pkg, (err, output) => {
+    const file = fs.existsSync(configPath) ? configPath : path.resolve(__dirname, 'fixture/README.e');
+    e.renderFile(file, result.pkg, (err, output) => {
       if (err) {
         console.log(err);
       }
